@@ -1,11 +1,3 @@
-## 1️⃣ Launch Maven Environment and Configure
-- Name: Maven-Build-Env
-- AMI: Amazon Linux 2
-- Instance type: t2.micro
-- Security group ports: 22
-
-## 2️⃣ Install and Configure Java11 and Apache Maven
-```bash
 #!/bin/bash
 sudo yum update -y
 sudo amazon-linux-extras install java-openjdk11 -y
@@ -36,17 +28,6 @@ yum install git -y
 
 ## Download the settings.xml file into /home/USER/.m2 to provide Authorization to Nexus
 mkdir /home/jenkinsmaster/.m2
-wget https://raw.githubusercontent.com/Gitannih01/jenkins-master-client-project/maven-sonarqube-nexus-jenkins/settings.xml -P /home/jenkinsmaster/.m2/
+wget https://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/maven-sonarqube-nexus-jenkins/settings.xml -P /home/jenkinsmaster/.m2/
 chown jenkinsmaster:jenkinsmaster /home/jenkinsmaster/.m2/
 chown jenkinsmaster:jenkinsmaster /home/jenkinsmaster/.m2/settings.xml
-```
-```
-Set JAVA Default Version to: Java 11
-```
-- NOTE/Test: ssh jenkinsmaster@MAVEN_VM_PUBLIC_IP
-
-## 3️⃣ NOTE: Post Operations (Only Neccessary If You Must Test The Environment Before Integrating Jenkins)
-```bash
-git clone https://github.com/awanmbandi/realworld-cicd-pipeline-project.git
-git checkout maven-sonarqube-nexus
-```
