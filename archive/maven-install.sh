@@ -8,7 +8,7 @@ sudo yum install -y apache-maven
 
 ## Configure MAVEN_HOME and PATH Environment Variables
 rm .bash_profile
-wget https://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/jenkins-master-client-config/.bash_profile
+wget 
 source .bash_profile
 mvn -v
 
@@ -30,4 +30,4 @@ yum install git -y
 mkdir /home/jenkinsmaster/.m2
 wget https://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/maven-sonarqube-nexus-jenkins/settings.xml -P /home/jenkinsmaster/.m2/
 chown jenkinsmaster:jenkinsmaster /home/jenkinsmaster/.m2/
-chown jenkinsmaster:jenkinsmaster /home/jenkinsmaster/.m2/settings.xml
+chown jenkinsmaster:jenkinsmaster /home/jenkinsmaster/.m2/settings.xmlhttps://raw.githubusercontent.com/awanmbandi/realworld-cicd-pipeline-project/jenkins-master-client-config/.bash_profile
